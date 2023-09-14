@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { methods as afiliadosControllers } from "../controllers/afiliados.controllers";
+import { methods as afiliadosControllers } from "../controllers/afiliados.controllers.js";
 
 const router = Router();
 

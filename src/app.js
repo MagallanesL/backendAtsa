@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import afiliadosRoutes from "./routes/afiliados";
+import afiliadosRoutes from "./routes/afiliados.js";
 
 const app = express();
 const cors = require('cors');
