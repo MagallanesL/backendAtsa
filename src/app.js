@@ -3,7 +3,8 @@ import morgan from 'morgan';
 import afiliadosRoutes from "./routes/afiliados.js";
 
 const app = express();
-const cors = require('cors');
+// const cors = require('cors');
+import cors from 'cors';
 
 app.use(cors({
     origin: "http://localhost:5173",

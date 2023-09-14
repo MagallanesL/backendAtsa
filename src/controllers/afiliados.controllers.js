@@ -1,6 +1,6 @@
 import mysql from "mysql2/promise";
 import config from "./../config.js";
-import { datosAfiliados } from "./afiliadosObjet.js";
+import  datosAfiliados  from "./afiliadosObjet.js";
 
 const pool = mysql.createPool({
   host: config.host,
