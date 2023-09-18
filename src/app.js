@@ -7,7 +7,7 @@ const app = express();
 import cors from 'cors';
 
 app.use(cors({
-    origin: "https://api-atsa.onrender.com/",
+    origin: "http://localhost:5173",
   }));
 
 
