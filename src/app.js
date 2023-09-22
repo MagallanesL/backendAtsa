@@ -7,7 +7,7 @@ const app = express();
 import cors from 'cors';
 
 app.use(cors({
-    origin: "https://gs-atsa-magallanesl.vercel.app/",
+    origin: "http://localhost:5173",
   }));
 
 
