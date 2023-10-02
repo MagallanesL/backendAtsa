@@ -72,24 +72,24 @@ const addAfiliado = async (req, res) => {
   }
 };
 
-//Add Empleador
+//Add Familiar
 
-const addEmpleadores = async (req, res) => {
+const addFamiliar = async (req, res) => {
   try {
-    const newEmpleadorData = {
+    const newFamiliarData = {
       ...req.body,
     };
 
     const connection = await getConnection();
     const [result] = await connection.query(
-      "INSERT INTO empleadores SET ?", 
-      newEmpleadorData
+      "INSERT INTO familiares SET ?", 
+      newFamiliarData
     );
 
-    res.json({ message: "Se Agregó el Empleador" });
+    res.json({ message: "se agrego Familiar a cargo" });
   } catch (error) {
-    console.error("Error al insertar empleador:", error);
-    res.status(500).json({ error: "No se pudo insertar el empleador" });
+    console.error("Error al insertar familiar:", error);
+    res.status(500).json({ error: "No se pudo insertar familiar" });
   }
 };
 
@@ -149,7 +149,7 @@ export const methods = {
   getAfiliados,
   getDatos,
   addAfiliado,
-  addEmpleadores,
+  addFamiliar,
   deleteAfiliados,
   updateAfiliados
 };
