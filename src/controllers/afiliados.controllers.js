@@ -94,6 +94,21 @@ const addFamiliar = async (req, res) => {
   }
 };
 
+//GET Familiar
+
+const getFamiliar = async (req, res) => {
+  try {
+    const connection = await getConnection();
+    const [result] = await connection.query("SELECT * FROM familiares");
+    res.json(result);
+    connection.release();
+    console.log(res);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    res.status(500).json({ error: "Failed to fetch data" });
+  }
+};
+
 
 //Eliminar Afiliado
 
@@ -149,6 +164,7 @@ const updateAfiliados = async (req, res) => {
 export const methods = {
   getAfiliados,
   getDatos,
+  getFamiliar,
   addAfiliado,
   addFamiliar,
   deleteAfiliados,
