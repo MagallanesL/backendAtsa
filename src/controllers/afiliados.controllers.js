@@ -76,12 +76,12 @@ const addAfiliado = async (req, res) => {
 //Add Familiar
 
 const addFamiliar = async (req, res) => {
+  console.log(req.body);
   try {
     const newFamiliarData = {
-      ...familiarData, // objeto familiar
       ...req.body,
     };
-
+console.log(newFamiliarData)
     const connection = await getConnection();
     const [result] = await connection.query(
       "INSERT INTO familiares SET ?", 
