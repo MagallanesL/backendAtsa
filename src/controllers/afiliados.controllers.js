@@ -78,6 +78,7 @@ const addAfiliado = async (req, res) => {
 const addFamiliar = async (req, res) => {
   try {
     const newFamiliarData = {
+      ...familiarData, // objeto familiar
       ...req.body,
     };
 
