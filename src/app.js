@@ -18,6 +18,6 @@ app.use(express.json());
 
 
 //Routes
-app.use("/api/Afiliados/", afiliadosRoutes);
+app.use("/api/afiliados", afiliadosRoutes);
 
 export default app;
