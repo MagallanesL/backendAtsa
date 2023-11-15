@@ -15,4 +15,3 @@ router.put("/api/afiliados/:dni", afiliadosControllers.updateAfiliados);
 
 export default router;
 
-.
